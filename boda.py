@@ -46,7 +46,11 @@ def conheses():
              "\x1B[3m-> Forazz escreve sim ou não oh bartolo",\
              "\x1B[3m-> Caralho é sim ou não chabal"]
     sim=["sim","s","ya","yes","y"]
-    não=["nao","não","n","no"]
+    não=["nao","não","n","no", "quem", "quem?"]
+    talvez=["talvez", "tlvz"]
+    talveztext=["Não é talvez cabrão, é sim ou não",\
+                "Queres levar xinada? É sim ou não, não talvez",\
+                "Tás a ser parvo ou o quê? Aqui não há talvez"]
     
     #No pila escreves tuples (pergunta, resposta)
     
@@ -86,6 +90,10 @@ def conheses():
                 print(item[1])
                 print()
                 respondeu = True
+            elif answ in talvez:
+                print()
+                print(random.choice(talveztext))
+                print()
             else:
                 print()
                 print(random.choice(escrita))

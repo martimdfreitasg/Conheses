@@ -1,4 +1,5 @@
 def conheses():  
+    import random
     bodaq="\x1B[0mConheses o Boda? (Sim ou não) -> "
     bodatext="\x1B[3m-> O caralho que ta foda"
     espamaq="\x1B[0mE o Espama? -> "
@@ -40,32 +41,38 @@ def conheses():
 
     
     mas="\x1B[3m-> Mas..."
-    escrita="\x1B[3m-> Responde com sim ou não oh corno"
+    escrita=["\x1B[3m-> Responde com sim ou não oh corno",\
+             "\x1B[3m-> Wi para lá com isso, é sim ou não",\
+             "\x1B[3m-> Forazz escreve sim ou não oh bartolo",\
+             "\x1B[3m-> Caralho é sim ou não chabal"]
     sim=["sim","s","ya","yes","y"]
     não=["nao","não","n","no"]
     
     #No pila escreves tuples (pergunta, resposta)
-    pila = [(bodaq,bodatext),\
-            (espamaq,espamatext),\
-                (teixeiraq,teixeiratext),\
-                    (pacauq,pacautext),\
-                        (miroq,mirotext),\
-                            (marioq,mariotext),\
-                                (tatuq,tatutext),\
-                                    (joaoq,joaotext),\
-                                        (bartoloq,bartolotext),\
-                                            (manelq,maneltext),\
-                                                (inesq,inestext),\
-                                                    (nicoq,nicotext),\
-                                                        (paveq,pavetext),\
-                                                            (ramaq,ramatext),\
-                                                                (abreuq,abreutext),\
-                                                                    (sosaq,sosatext),\
-                                                                        (albq,albtext),\
-                                                                            (semedoq,semedotext),\
-                                                                            	(carq,cartext)]
     
-    for item in (pila):
+    pila = [(espamaq,espamatext),\
+            (teixeiraq,teixeiratext),\
+            (pacauq,pacautext),\
+            (miroq,mirotext),\
+            (marioq,mariotext),\
+            (tatuq,tatutext),\
+            (joaoq,joaotext),\
+            (bartoloq,bartolotext),\
+            (manelq,maneltext),\
+            (inesq,inestext),\
+            (nicoq,nicotext),\
+            (paveq,pavetext),\
+            (ramaq,ramatext),\
+            (abreuq,abreutext),\
+            (sosaq,sosatext),\
+            (albq,albtext),\
+            (semedoq,semedotext),\
+            	(carq,cartext)]
+    random.shuffle(pila)
+    pila.append((bodaq,bodatext))
+    pila.reverse()
+    
+    for item in pila:
         respondeu = False
         while not respondeu:
             answ=str(input(item[0])).lower()
@@ -81,6 +88,6 @@ def conheses():
                 respondeu = True
             else:
                 print()
-                print(escrita)
+                print(random.choice(escrita))
                 print()
 conheses()

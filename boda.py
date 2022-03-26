@@ -38,6 +38,8 @@ def conheses():
     semedotext="\x1B[3m-> O que te vai ao cu sem medo"
     carq="\x1B[0mE o Carriço? ->"
     cartext="\x1B[3m-> Agarra aqui o meu piço"
+    susanaq="\x1B[0mE a Susana? ->"
+    susanatext="\x1B[3m-> Come a minha banana"
 
     
     mas="\x1B[3m-> Mas..."
@@ -48,9 +50,9 @@ def conheses():
     sim=["sim","s","ya","yes","y"]
     não=["nao","não","n","no", "quem", "quem?"]
     talvez=["talvez", "tlvz"]
-    talveztext=["Não é talvez cabrão, é sim ou não",\
-                "Queres levar xinada? É sim ou não, não talvez",\
-                "Tás a ser parvo ou o quê? Aqui não há talvez"]
+    talveztext=["\x1B[3mNão é talvez cabrão, é sim ou não",\
+                "\x1B[3mQueres levar xinada? É sim ou não, não talvez",\
+                "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]
     
     #No pila escreves tuples (pergunta, resposta)
     
@@ -71,7 +73,8 @@ def conheses():
             (sosaq,sosatext),\
             (albq,albtext),\
             (semedoq,semedotext),\
-            	(carq,cartext)]
+            (carq,cartext),\
+            (susanaq,susanatext)]
     random.shuffle(pila)
     pila.append((bodaq,bodatext))
     pila.reverse()

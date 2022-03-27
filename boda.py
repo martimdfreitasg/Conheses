@@ -53,8 +53,42 @@ def conheses():
     talveztext=["\x1B[3mNão é talvez cabrão, é sim ou não",\
                 "\x1B[3mQueres levar xinada? É sim ou não, não talvez",\
                 "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]
-    
-    #No pila escreves tuples (pergunta, resposta)
+        
+    #Mudar para se a frase tiver tu (mesmo que mais elementos), resp conhesostext
+    conhesos=["conheso e tu",\
+             "conheso e tu?",\
+             "conheso, e tu",\
+             "conheso, e tu?",\
+             "conheço e tu",\
+             "conheço e tu?",\
+             "conheço, e tu",\
+             "conheço, e tu?",\
+             "sim e tu",\
+             "sim e tu?",\
+             "sim, e tu",\
+             "sim, e tu?",\
+             "ya e tu",\
+             "ya e tu?",\
+             "ya, e tu",\
+             "ya, e tu?",\
+             "ya tu",\
+             "ya tu?",\
+             "tu conheses",\
+             "tu conheses?",\
+             "e tu conheses?",\
+             "e tu conheses",\
+             "e tu, conheses?",\
+             "e tu, conheses",\
+             "tu conheces",\
+             "tu conheces?",\
+             "e tu conheces?",\
+             "e tu conheces",\
+             "e tu, conheces?",\
+             "e tu, conheces"]
+    conhesostext=["\x1B[3mMadjé claro que sim, tou te a perguntar a ti carocho",\
+                 "\x1B[3mDeves ter a mania que és engracadinho oh corno",\
+                 "\x1B[3mEu conheso corno, já tu não deves saber caralho",\
+                 "\x1B[3mAqui quem faz as perguntas sou eu oh cabrão"]
     
     pila = [(espamaq,espamatext),\
             (teixeiraq,teixeiratext),\
@@ -96,6 +130,10 @@ def conheses():
             elif answ in talvez:
                 print()
                 print(random.choice(talveztext))
+                print()
+            elif answ in conhesos:
+                print()
+                print(random.choice(conhesostext))
                 print()
             else:
                 print()

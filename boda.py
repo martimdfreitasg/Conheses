@@ -47,46 +47,15 @@ def conheses():
              "\x1B[3m-> Wi para lá com isso, é sim ou não",\
              "\x1B[3m-> Forazz escreve sim ou não oh bartolo",\
              "\x1B[3m-> Caralho é sim ou não chabal"]
-    sim=["sim","s","ya","yes","y"]
-    não=["nao","não","n","no", "quem", "quem?"]
+    sim=["sim","s","ya","yes","y","conheço","conheso"]
+    não=["nao","n","não","no", "quem", "quem?"]
     talvez=["talvez", "tlvz"]
     talveztext=["\x1B[3mNão é talvez cabrão, é sim ou não",\
                 "\x1B[3mQueres levar xinada? É sim ou não, não talvez",\
-                "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]
-        
-    #Mudar para se a frase tiver tu (mesmo que mais elementos), resp conhesostext
-    conhesos=["conheso e tu",\
-             "conheso e tu?",\
-             "conheso, e tu",\
-             "conheso, e tu?",\
-             "conheço e tu",\
-             "conheço e tu?",\
-             "conheço, e tu",\
-             "conheço, e tu?",\
-             "sim e tu",\
-             "sim e tu?",\
-             "sim, e tu",\
-             "sim, e tu?",\
-             "ya e tu",\
-             "ya e tu?",\
-             "ya, e tu",\
-             "ya, e tu?",\
-             "ya tu",\
-             "ya tu?",\
-             "tu conheses",\
-             "tu conheses?",\
-             "e tu conheses?",\
-             "e tu conheses",\
-             "e tu, conheses?",\
-             "e tu, conheses",\
-             "tu conheces",\
-             "tu conheces?",\
-             "e tu conheces?",\
-             "e tu conheces",\
-             "e tu, conheces?",\
-             "e tu, conheces"]
+                "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]    
+    conhesos=["tu","conheses","conheces"]
     conhesostext=["\x1B[3mMadjé claro que sim, tou te a perguntar a ti carocho",\
-                 "\x1B[3mDeves ter a mania que és engracadinho oh corno",\
+                 "\x1B[3mDeves ter a mania que és engracadinho oh corno, responde mazé",\
                  "\x1B[3mEu conheso corno, já tu não deves saber caralho",\
                  "\x1B[3mAqui quem faz as perguntas sou eu oh cabrão"]
     
@@ -117,24 +86,24 @@ def conheses():
         respondeu = False
         while not respondeu:
             answ=str(input(item[0])).lower()
-            if answ in sim:
+            if any(word in answ for word in conhesos):
+                print()
+                print(random.choice(conhesostext))
+                print()
+            elif any(word in answ.split() for word in talvez):
+                print()
+                print(random.choice(talveztext))
+                print()
+            elif any(word in answ.split() for word in sim):
                 print()
                 print(mas)
                 print()
                 respondeu = True
-            elif answ in não:
+            elif any(word in answ.split() for word in não):
                 print()
                 print(item[1])
                 print()
                 respondeu = True
-            elif answ in talvez:
-                print()
-                print(random.choice(talveztext))
-                print()
-            elif answ in conhesos:
-                print()
-                print(random.choice(conhesostext))
-                print()
             else:
                 print()
                 print(random.choice(escrita))

@@ -53,7 +53,7 @@ def conheses():
              "\x1B[3m-> Caralho é sim ou não chabal"]
     sim=["sim","s","ya","yes","y","conheço","conheso"]
     não=["nao","n","não","no", "quem", "quem?"]
-    talvez=["talvez", "tlvz"]
+    talvez=["talvez", "tlvz", "talvez?", "tlvz?"]
     talveztext=["\x1B[3mNão é talvez cabrão, é sim ou não",\
                 "\x1B[3mQueres levar xinada? É sim ou não, não talvez",\
                 "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]    

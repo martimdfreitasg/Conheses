@@ -40,6 +40,10 @@ def conheses():
     cartext="\x1B[3m-> Agarra aqui o meu piço"
     susanaq="\x1B[0mE a Susana? ->"
     susanatext="\x1B[3m-> Come a minha banana"
+    lisaq="\x1B[0mE o Lisandro? ->"
+    lisatext="\x1B[3m-> Dá cá o cu seu malandro"
+    brasq="\x1B[0mE o Brás? ->"
+    brastext="\x1B[3m-> Aquele que te dá por trás"
 
     
     mas="\x1B[3m-> Mas..."
@@ -53,7 +57,7 @@ def conheses():
     talveztext=["\x1B[3mNão é talvez cabrão, é sim ou não",\
                 "\x1B[3mQueres levar xinada? É sim ou não, não talvez",\
                 "\x1B[3mTás a ser parvo ou o quê? Aqui não há talvez"]    
-    conhesos=["tu","conheses","conheces"]
+    conhesos=["tu","conheses","conheces","tu?","conheses?","conheces?"]
     conhesostext=["\x1B[3mMadjé claro que sim, tou te a perguntar a ti carocho",\
                  "\x1B[3mDeves ter a mania que és engracadinho oh corno, responde mazé",\
                  "\x1B[3mEu conheso corno, já tu não deves saber caralho",\
@@ -77,7 +81,9 @@ def conheses():
             (albq,albtext),\
             (semedoq,semedotext),\
             (carq,cartext),\
-            (susanaq,susanatext)]
+            (susanaq,susanatext),\
+            (lisaq,lisatext),\
+            (brasq,brastext)]
     random.shuffle(pila)
     pila.append((bodaq,bodatext))
     pila.reverse()
@@ -86,7 +92,7 @@ def conheses():
         respondeu = False
         while not respondeu:
             answ=str(input(item[0])).lower()
-            if any(word in answ for word in conhesos):
+            if any(word in answ.split() for word in conhesos):
                 print()
                 print(random.choice(conhesostext))
                 print()

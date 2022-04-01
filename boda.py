@@ -44,6 +44,12 @@ def conheses():
     lisatext="\x1B[3m-> Dá cá o cu seu malandro"
     brasq="\x1B[0mE o Brás? ->"
     brastext="\x1B[3m-> Aquele que te dá por trás"
+    benjq="\x1B[0mE o Benjamim? ->"
+    benjtext="\x1B[3m-> Então beija minha rola"
+    mateusq="\x1B[0mE o Mateus? ->"
+    mateustext="\x1B[3m-> O que meteu-os na tua boca"
+    almeidaq="\x1B[0mE o Almeida? ->"
+    almeidatext="\x1B[3m-> O que te deu na peida"
 
     
     mas="\x1B[3m-> Mas..."
@@ -83,7 +89,10 @@ def conheses():
             (carq,cartext),\
             (susanaq,susanatext),\
             (lisaq,lisatext),\
-            (brasq,brastext)]
+            (brasq,brastext),\
+            (benjq,benjtext),\
+            (mateusq,mateustext),\
+            (almeidaq,almeidatext)]
     random.shuffle(pila)
     pila.append((bodaq,bodatext))
     pila.reverse()

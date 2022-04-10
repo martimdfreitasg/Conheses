@@ -50,6 +50,10 @@ def conheses():
     mateustext="\x1B[3m-> O que meteu-os na tua boca"
     almeidaq="\x1B[0mE o Almeida? ->"
     almeidatext="\x1B[3m-> O que te deu na peida"
+    anaq="\x1B[0mE a Ana Cacho? ->"
+    anatext="\x1B[3m-> Então Ana cá chupá-lo"
+    jacintoq="\x1B[0mE o Jacinto? ->"
+    jacintotext="\x1B[3m-> Já sinto o meu pau aí dentro"
 
     
     mas="\x1B[3m-> Mas..."
@@ -92,7 +96,9 @@ def conheses():
             (brasq,brastext),\
             (benjq,benjtext),\
             (mateusq,mateustext),\
-            (almeidaq,almeidatext)]
+            (almeidaq,almeidatext),
+            (anaq,anatext),\
+            (jacintoq,jacintotext)]
     random.shuffle(pila)
     pila.append((bodaq,bodatext))
     pila.reverse()
@@ -123,4 +129,6 @@ def conheses():
                 print()
                 print(random.choice(escrita))
                 print()
-conheses()
+                
+if __name__ == '__main__':                
+    conheses()

@@ -20,17 +20,13 @@ def conheses():
     bartolotext="\x1B[3m-> Bartolo, agora o teu cu é meu"
     manelq="\x1B[0mE o Manel? ->"
     maneltext="\x1B[3m-> Agarra-me aqui no pincel"
-    inesq="\x1B[0mE a Inês? ->"
-    inestext="\x1B[3m-> A inesquecível pirocada nesse cu"
     nicoq="\x1B[0mE o Nicolau? ->"
     nicotext="\x1B[3m-> Pega no meu pau"
-    paveq="\x1B[0mE o Pavê? ->"
-    pavetext="\x1B[3m-> Dá-me o cu e vê"
     ramaq="\x1B[0mE o Ramalho? ->"
     ramatext="\x1B[3m-> Mama-me aqui o caralho"
     abreuq="\x1B[0mE o Abreu? ->"
     abreutext="\x1B[3m-> Aquele que te comeu"
-    sosaq="\x1B[0mE o Sosa? ->"
+    sosaq="\x1B[0mE o Barbosa? ->"
     sosatext="\x1B[3m-> Espreita aqui a grossa"
     albq="\x1B[0mE o Alberto? ->"
     albtext="\x1B[3m-> O que te deixou o cu aberto"
@@ -38,8 +34,8 @@ def conheses():
     semedotext="\x1B[3m-> O que te vai ao cu sem medo"
     carq="\x1B[0mE o Carriço? ->"
     cartext="\x1B[3m-> Agarra aqui o meu piço"
-    susanaq="\x1B[0mE a Susana? ->"
-    susanatext="\x1B[3m-> Come a minha banana"
+    susanaq="\x1B[0mE a Joana? ->"
+    susanatext="\x1B[3m-> Chupa aqui a banana"
     lisaq="\x1B[0mE o Lisandro? ->"
     lisatext="\x1B[3m-> Dá cá o cu seu malandro"
     brasq="\x1B[0mE o Brás? ->"
@@ -82,9 +78,7 @@ def conheses():
             (joaoq,joaotext),\
             (bartoloq,bartolotext),\
             (manelq,maneltext),\
-            (inesq,inestext),\
             (nicoq,nicotext),\
-            (paveq,pavetext),\
             (ramaq,ramatext),\
             (abreuq,abreutext),\
             (sosaq,sosatext),\
